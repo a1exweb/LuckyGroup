@@ -1,0 +1,217 @@
+.main
+    background-color: #F4F4F4
+    padding: 75px 0
+.form
+    display: flex
+    max-width: 1120px
+    height: 500px
+    margin: auto
+.block
+    &-photo
+        position: relative
+        max-width: 560px
+        width: 100%
+        background: linear-gradient(90deg, rgba(66,138,96,1) 0%, rgba(53,115,79,1) 100%)
+        overflow: hidden
+        &__image
+            position: absolute
+            max-width: 465px
+            bottom: 35px
+            left: 58px
+            z-index: 2
+        &__label
+            font-size: 18px
+            font-weight: 700
+            color: #fff
+            position: absolute
+            &_top
+                top: 42px
+                left: 40px
+            &_bottom
+                bottom: 40px
+                left: 40px
+        &::after
+            position: absolute
+            content: ''
+            width: 688px
+            height: 688px
+            border-radius: 50%
+            border: 20px solid rgba(#FFFFFF, .03)
+            top: -94px
+            right: -362px
+        &::before
+            position: absolute
+            content: ''
+            width: 398px
+            height: 398px
+            background-color: #428A60
+            border-radius: 50%
+            top: 72px
+            left: 17px
+            z-index: 1
+    &-form
+        width: 100%
+        max-height: 500px
+        overflow: hidden
+        &__label
+            display: block
+            text-transform: uppercase
+            font-size: 12px
+            font-weight: 800
+            margin-bottom: 10px
+            width: 100%
+            span
+                color: #428A60
+                letter-spacing: 5%
+        &__input
+            display: block
+            width: 100%
+            height: 50px
+            background-color: #F8F8F8
+            border: 1px solid #E4E4E4
+            font-size: 14px
+            border-radius: 5px
+            margin-bottom: 24px
+            padding: 20px 15px
+            &_phone
+                max-width: 184px
+                margin-right: 20px
+        &__title
+            background-color: #F8F8F8
+            font-size: 30px
+            padding: 35px
+            text-align: center
+            font-weight: 800
+        &__wrap
+            padding: 52px 123px 60px 117px
+            background-color: #fff
+            height: 100%
+    &-phone
+        display: flex
+        flex-wrap: wrap
+        &__button
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: 15px
+            position: relative
+            background-color:#428A60
+            border: 0
+            color: #fff
+            border-radius: 5px
+            min-width: 320px
+            height: 42px
+            font-size: 14px
+            transition: 0.5s
+            img
+                margin-left: 10px
+.phone
+    &-select
+        display: flex
+        align-items: center
+        border-radius: 5px
+        background-color: #F8F8F8
+        border: 1px solid #E4E4E4
+        width: 116px
+        height: 50px
+        padding: 16px 17px
+        cursor: pointer
+        position: relative
+        &__options
+            position: absolute
+            top: 60px
+            left: 0
+            z-index: 9
+            background-color: #F8F8F8
+            border: 1px solid #E4E4E4
+            width: 116px
+            padding: 16px 17px
+            border-radius: 5px
+            display: none
+            &_active
+                display: block
+        &__item
+            img
+                margin-left: 5px
+                margin-top: 4px
+                height: 18px
+        &__dropdown
+            margin-left: 7px
+.form__footer
+    display: none
+
+@media(hover: hover) and (pointer: fine) 
+    .phone
+        &-select
+            &__item
+                &:hover
+                    text-decoration: underline
+    .block
+        &-phone
+            &__button
+                &:hover
+                    background-color: darken(#428A60, 5%)
+@media screen and ( max-width: 1200px )
+    .form
+        flex-direction: column
+        height: auto
+        margin: auto
+        max-width: 560px
+    .block
+        &-photo
+            min-height: 500px
+        &-form
+            max-width: 560px
+@media screen and ( max-width: 600px )
+    .form
+        max-width: 320px
+    .block
+        &-photo
+            background: #fff
+            min-height: 350px
+            &__image
+                max-width: 220px
+                bottom: 105px
+            &::after
+                display: none
+            &::before
+                height: 200px
+                width: 200px
+                left: 55px
+            &__label
+                color: #212221
+                &_top
+                    left: 18px
+                &_bottom
+                    bottom: unset
+                    left: unset
+                    top: 42px
+                    right: 22px
+        &-form
+            z-index: 999
+            margin-top: -35px
+            &__title
+                background-color: #fff
+                padding: 0 0 15px
+            &__wrap
+                padding: 18px
+            &__input
+                &_phone
+                    max-width: 170px
+                    width: 100%
+                    margin-right: 5px
+        &-phone
+            &__button
+                min-width: 280px
+                width: 100%
+    .phone-select
+        width: 105px
+        padding: 10px
+    .form__footer
+        display: block
+        text-align: center
+        background-color: #F8F8F8
+        padding: 15px
+        font-size: 14px
+        img
+            margin: 0 15px
